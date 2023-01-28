@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+>
+
+<TextView
+    android:id="@+id/textview1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Principle Amount : "
+    android:textSize="25dp"
+    android:textStyle="bold"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="20dp"
+    android:textColor="#872121"
+    />
+
+    <EditText
+        android:id="@+id/editview1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:drawableStart="@drawable/ic_baseline_currency_rupee_24"
+        android:includeFontPadding="false"
+
+        android:minHeight="48dp"
+        android:paddingEnd="20dp" />
+    <TextView
+        android:id="@+id/textview2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Interest :"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="#872121"
+        android:layout_below="@id/editview1"
+        />
+
+    <EditText
+        android:id="@+id/editview2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview2"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="20dp"
+        android:drawableStart="@drawable/ic_baseline_percent_24"
+        android:includeFontPadding="false"
+        android:paddingEnd="20dp" />
+
+    <TextView
+        android:id="@+id/textview3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Period : "
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="#872121"
+        android:layout_below="@id/editview2"
+        />
+
+    <EditText
+        android:id="@+id/editview3"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textview3"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:includeFontPadding="false"
+        android:paddingEnd="20dp" />
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@id/editview3"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:text="Calculate"
+        android:textAllCaps="false"
+        android:textColor="#E6E5E5"
+        android:paddingHorizontal="50dp"
+
+        />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="60dp"
+        android:text="Reset"
+        android:textAllCaps="false"
+        android:textColor="#E6E5E5"
+        android:layout_toRightOf="@id/button1"
+        android:layout_below="@id/editview3"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        />
+
+    <TextView
+        android:id="@+id/monthltEmi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:includeFontPadding="false"
+        android:layout_centerHorizontal="true"
+        android:paddingEnd="20dp"
+        android:text="Monthly EMI : "
+        android:textColor="#872121"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/showMEMI"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/monthltEmi"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Rs 0.00"
+        android:textColor="#872121"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/borderemi"
+        android:includeFontPadding="false"
+        android:paddingEnd="20dp" />
+    <TextView
+        android:id="@+id/totalInterest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Interest : "
+        android:textSize="25dp"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:textColor="#872121"
+        android:layout_below="@id/showMEMI"
+        />
+
+    <TextView
+        android:id="@+id/showTotalInterest"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginRight="20dp"
+        android:text="Rs 0.00"
+        android:textColor="#872121"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_below="@id/totalInterest"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/borderemi"
+        android:includeFontPadding="false"
+        android:paddingEnd="20dp" />
+    <TextView
+        android:id="@+id/totalPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Payment :"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#872121"
+        android:layout_below="@id/showTotalInterest"
+        />
+
+
+    <TextView
+        android:id="@+id/showTotalPayment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/totalPayment"
+        android:layout_marginLeft="20dp"
+        android:text="Rs 0.00"
+        android:textColor="#872121"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/borderemi"
+         />
+
+</RelativeLayout>
